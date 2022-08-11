@@ -1,0 +1,39 @@
+Problem URL : https://codeforces.com/problemset/problem/282/A
+
+Solution:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+	int n;
+	cin >> n;
+	
+	int x = 0;
+	
+	string str;
+	while(n--)
+	{
+		cin >> str;
+		
+		if(str[0] == '+' || str[2] == '+') x++;
+		else x--;
+	}
+	
+	cout << x;
+}
+
+int main(){
+	
+	int testCases = 1;
+//	cin >> testCases;
+	
+	while(testCases--)
+	{
+		solve();
+		cout << endl;
+	}
+	
+	return 0;
+}
