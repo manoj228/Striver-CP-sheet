@@ -1,0 +1,39 @@
+Problem link: https://codeforces.com/contest/514/problem/A
+
+
+Solution:
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve()
+{
+	string str;
+	cin >> str;
+
+	int size = str.size();
+	for(int i = 0; i < size; i++)
+	{
+		if(i == 0 && str[i] == '9' || (str[i] >= '0' && str[i] <= '4'))
+		{
+			cout << str[i] ;
+		}
+		else{
+			cout << 9 - (str[i] - '0');
+		}
+	}
+}
+
+int main(){
+	
+	int testCases = 1;
+//	cin >> testCases;
+	
+	while(testCases--)
+	{
+		solve();
+		cout << endl;
+	}
+	
+	return 0;
+}
